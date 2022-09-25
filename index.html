@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Combs</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link rel="icon" href="/favicon3.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&ampdisplay=swap" rel="stylesheet">
+    
+    <style>
+    
+      .hamburgmenu {
+        display:none;
+        /*display: inline-block;*/
+        cursor: pointer;
+      }
+
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+
+      .change .bar2 {opacity: 0;}
+
+      .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+    
+    
+    
+    
+      * {
+        box-sizing: border-box;
+      }
+
+      .row {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create two equal columns that sits next to each other */
+      .column {
+        -ms-flex: 50%; /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column  {
+          -ms-flex: 100%; /* IE 10 */
+          flex: 100%;
+        }
+        
+        nav {
+          display: none;
+        }
+        
+        .navmobile {
+          float:left;
+          display: inline-block;
+          background-color: white;
+          width:100%;
+          color: black;
+          margin: 0 0 0 0;
+          overflow: hidden;
+          position: fixed;
+          top: 0;
+          z-index: 999;
+          padding: 12px 0 12px 15px
+        }  
+        
+        .hamburgmenu {
+          float:right;
+          display: inline-block;
+          cursor: pointer;
+          padding: 0 17px 0 0
+        }
+        
+        .linkmenumobile {
+          background-color: white;
+          line-height: 350%;
+          text-align: center;
+          width:100%;
+          height:100vh;
+          color: black;
+          margin: 0;
+          padding: 70px 0 0 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: visibility 1s, opacity 0.2s linear;
+          position:fixed;
+          top: 0;
+          z-index:998;
+          /*justify-content: center;
+          align-items: center;*/
+          touch-action: none;
+        } 
+        
+      }
+    
+      ul {
+        list-style-type: none;
+        margin: auto;
+        display: inline-block;
+        padding: 0;
+        margin-top: 15px;
+        width: auto;
+        overflow: hidden;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #1AC1C1;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      a:hover {
+        color: black;
+      }
+      
+      .menulink {
+        position: relative;
+        display: inline-block;
+        margin:-15px;
+      }
+      .menulink .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+      }
+      .menulink:hover .img-top {
+        display: inline;
+      }
+      
+      .container {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+      }
+      
+      .overlay {
+       position: absolute;
+       border-radius: 9px;
+       top: 6px;
+       bottom: 0;
+       left: 17px;
+       right: 0;
+       height: 168.3px;
+       width: 169px;
+       opacity: 0;
+       transition: .2s ease;
+       background-color: #1AC1C1;
+      }
+      
+      .text {
+       color: white;
+       font-size: 20px;
+       font-weight: 600;
+       position: absolute;
+       width: 70%;
+       top: 50%;
+       left: 50%;
+       -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
+       text-align: center;
+      }
+
+      .container:hover .overlay {
+        opacity: 1;
+      } 
+      
+
+    </style>
+    
+  </head>
+  
+  <body>
+  
+    <script>
+
+      function myFunction(x) {
+        x.classList.toggle("change");
+        
+        var menuBox = document.getElementById('menuBox');    
+        if(menuBox.style.visibility == "visible") { // if is menuBox displayed, hide it
+          menuBox.style.visibility = "hidden";
+          menuBox.style.opacity = "0";
+        }
+        else { // if is menuBox hidden, display it
+          menuBox.style.visibility = "visible";
+          menuBox.style.opacity = "1";
+        }
+        
+        
+      }
+      
+
+      
+    </script>
+    
+    
+    
+    
+    <div class="navmobile"> <a href="https://ashleycombs.neocities.org" style="color:#000; font-size:28px; font-weight:bold; text-decoration:none;">Ashley Combs</a>
+    
+    <div class="hamburgmenu" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    </div>
+    
+    </div>
+    
+    <div class="linkmenumobile" id="menuBox"> <a href="https://ashleycombs.neocities.org" style="color:#000; font-size:25px; font-weight:bold; text-decoration:none;">HOME</a> 
+    <br>
+    <a href="https://ashleycombs.neocities.org/portfolio" style="color:#000; font-size:25px; font-weight:bold; text-decoration:none;">PORTFOLIO </a>
+    <br>
+    <a href="https://ashleycombs.neocities.org/about-contact" style="color:#000; font-size:25px; font-weight:bold; text-decoration:none;">ABOUT & CONTACT</a>
+    
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="https://ashleycombs.neocities.org" class="logo" style="font-size:42px">Ashley Combs</a>
+        </li>
+        <li><a href="https://ashleycombs.neocities.org">HOME</a>
+        </li>
+        <li><a href="https://ashleycombs.neocities.org/portfolio">PORTFOLIO</a>
+        </li>
+        <li><a href="https://ashleycombs.neocities.org/about-contact">ABOUT & CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div style="margin-bottom:100px;"></div>
+    
+    <div class="row"> 
+  <div class="column">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+    <img src="/picnicpreview.png" style="width:100%">
+  </div>
+</div>
+
+    <br>
+    <br>
+    
+    <div style="text-align: center">
+    
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+
+    </div>
+    
+    <br>
+    
+    <div style="text-align: center">
+    
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+
+    </div>
+    
+        <br>
+    
+    <div style="text-align: center">
+    
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+
+    </div>
+    
+            <br>
+    
+    <div style="text-align: center">
+    
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+    <div class="container">
+      <a href="#">
+      <img src="/bunthumbplaceholder.png" style = "display: inline-block; vertical-align: top; padding: 12px; padding-top: 0px;">
+           <div class="overlay"><div class ="text">Your Game Here</div></div></a>
+    </div>
+
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="site-footer">© Ashley Combs 2022.</footer>
+    
+    
+    
+    
+    
+
+  </body>
+</html>

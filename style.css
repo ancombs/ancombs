@@ -1,0 +1,146 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body, html {
+  padding:0;
+  margin:0;
+  height:100%;
+  background-color: white;
+  color: black;
+  font-size:15px;
+  font-family: 'Readex Pro', sans-serif;
+  
+}
+
+
+h1 {
+  font-family: Readex Pro;
+  font-size: 35px;
+}
+h2 {
+  font-family: Readex Pro;
+}  
+p {
+  font-family: Readex Pro;
+}
+
+.navmobile {
+  background-color: white;
+  width:100%;
+  color: black;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+
+.navmobile a {
+  color:black;
+  background-color: white;
+  display: inline-block;
+  /*line-height: 3em;*/
+  text-decoration: none;
+}
+
+.navmobile a:hover {
+  color: #E77070;
+}
+
+.linkmenumobile {
+  background-color: white;
+  width:100%;
+  color: black;
+  margin: 0;
+  overflow: hidden;
+  /*display:none;*/
+  visibility: hidden;
+  transition: visibility 1s, opacity 0.5s linear;
+}  
+
+nav {
+  background-color: white;
+  width:100%;
+  color: black;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li a {
+  color:black;
+  background-color: white;
+  display: block;
+  /*line-height: 3em;*/
+  padding: 3em 3em;
+  text-decoration: none;
+}
+nav ul li:first-child {
+  margin-right: auto;
+}
+nav ul li a.logo {
+  background-color: white;
+  padding: 0.7em 0 0 1.2em;
+  /*line-height: 3em;*/
+}
+nav ul li a:hover {
+  color: #E77070;
+}
+
+
+.about {
+    width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 0;
+}
+
+.about img {
+  float: left;
+  margin-right: 30px;
+  width:430px;
+  height:430px;
+}  
+
+.about p,
+.about h1 {
+  margin: -9px 0 0 15px;
+  vertical-align: top;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -80px; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  position:relative;
+  height: 100px; 
+}
+
+.site-footer {
+  background: #E77070;
+  /*background: #1AC1C1;*/
+  text-align: center;
+  padding-top: 30px;
+  width:100%;
+  color: white;
+}
